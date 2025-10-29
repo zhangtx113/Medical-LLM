@@ -1,0 +1,45 @@
+# Task: Generate Answers for Given Questions
+You are given a section of a medical textbook and a question derived from it.
+Generate a detailed and accurate answer strictly based on the text.
+Show your reasoning process in "think", provide the final concise answer in "answer",
+and extract all important information from the answer as "keyword".
+
+## Requirements:
+1. The answer must rely only on the given text.
+2. The "think" must combine direct paraphrasing of key sentences from the text with the model’s reasoning.
+3. The "answer" must summarize all essential information clearly (≤30 words).
+4. The "keyword" must include all important terms and phrases in the "answer", excluding those already in the "question".
+5. The "keyword" order should match the order they appear in the "answer".
+
+## Constraints:
+- Do **not** use phrases like "the text" or "the passage".
+- Ensure all "keyword" terms appear in the "answer".
+- Keep tone academic and precise.
+
+## Example
+Input Text:
+"Cardiac muscle cells contain myofibrils for contraction, mitochondria that generate ATP, and a sarcoplasmic reticulum regulating calcium cycling."
+
+Input Question:
+"What are the main structures and functions of cardiac muscle cells?" (Definition)
+
+Expected Output:
+{
+  "think": "Cardiac muscle cells contain myofibrils responsible for contraction, mitochondria that generate ATP, and a sarcoplasmic reticulum that regulates calcium cycling. Together, these structures sustain rhythmic contraction and relaxation.",
+  "answer": "Cardiac muscle cells contain myofibrils, mitochondria, and sarcoplasmic reticulum that regulate contraction and relaxation.",
+  "keyword": "myofibrils, mitochondria, sarcoplasmic reticulum, contraction, relaxation"
+}
+
+## Output Format:
+{
+  "think": "...",
+  "answer": "...",
+  "keyword": "..."
+}
+
+## Text Excerpt:
+{{TEXT}}
+
+## Question:
+{{QUESTION}}
+(Question Type: {{TYPE}})

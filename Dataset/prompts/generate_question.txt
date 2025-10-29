@@ -1,0 +1,32 @@
+# Task: Generate Structured Questions Based on Knowledge Points
+You are given a list of key knowledge points and a corresponding textbook passage.
+For each knowledge point, generate one or more questions belonging to one of the following three types:
+
+1. **Definition** — asks for structure, definition, or basic description.
+2. **Reasoning** — asks for causes, mechanisms, or logical explanations.
+3. **Application** — asks for functional or clinical implications.
+
+## Requirements:
+- Each question must be directly answerable from the text.
+- Avoid phrases like "according to the text" or "in the passage".
+- Questions should cover different levels of reasoning and stay within medical context.
+- Each output must contain: {"question": "...", "type": "Definition" or "Reasoning" or "Application"}
+
+## Example
+Input Knowledge Points:
+["Role of mitochondria in cardiac energy production", "Effect of β-adrenergic stimulation on calcium regulation"]
+
+Output Questions:
+[
+  {"question": "What is the role of mitochondria in energy production in cardiac cells?", "type": "Definition"},
+  {"question": "How does β-adrenergic stimulation influence calcium handling in cardiac muscle cells?", "type": "Application"}
+]
+
+## Output Format:
+Return results in JSON Lines (JSONL) format, one JSON object per line.
+
+## Knowledge Points:
+{{KNOWLEDGE}}
+
+## Text to analyze:
+{{TEXT}}
