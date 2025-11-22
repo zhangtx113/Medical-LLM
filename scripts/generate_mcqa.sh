@@ -1,10 +1,10 @@
 #!/bin/bash
-#SBATCH -J Generate_Dataset              # 作业名
+#SBATCH -J Generate_MCQA              # 作业名
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1                    # ✅ 推理调用只需 1 张 GPU
 #SBATCH --cpus-per-task=16
-#SBATCH --output=logs/Generate_Dataset_%j.out
-#SBATCH --error=logs/Generate_Dataset_%j.err
+#SBATCH --output=logs/Generate_MCQA_%j.out
+#SBATCH --error=logs/Generate_MCQA_%j.err
 
 echo "📘 启动医学问答数据集生成任务..."
 
@@ -16,6 +16,6 @@ conda activate medical-llm
 cd /mnt/inaisfs/data/home/zhaozc_criait/zhangtx/Medical_LLM/dataset
 
 # === 运行 Python 脚本 ===
-python generate_dataset.py
+python generate_mcqa.py
 
 echo "✅ 医学问答数据集生成任务完成！"

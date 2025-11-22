@@ -37,6 +37,15 @@ python eval_medxpertqa.py \
   --question-type Reasoning,Understanding \
   --max-samples 10
 
+python eval_medxpertqa_local.py \
+  --data-path medxpertqa_text.jsonl \
+  --medical-task "Diagnosis","Treatment","Basic Medicine" \
+  --body-system "Cardiovascular" \
+  --question-type "Reasoning","Understanding" \
+  --max-samples 10 \
+  --output-path results/predictions_qwen3_8b_local.jsonl
+
+
 ```
 
 构建知识点

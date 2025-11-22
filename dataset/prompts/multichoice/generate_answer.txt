@@ -1,0 +1,33 @@
+# Task: Analyze and Answer Multiple-Choice Question Based on Textbook Content
+
+You are a cardiovascular medicine education expert specializing in conceptual reasoning.
+Given a multiple-choice question and a textbook passage, your task is to determine the **most accurate answer option** and provide a detailed explanation ("think") that justifies your choice.
+
+【Requirements】
+- Use **formal academic English**.
+- Base all reasoning strictly on the provided text; do not invent or assume external information.
+- Carefully compare all options and select the single best answer.
+- In “think”, clearly explain **why the correct option is right** and, when appropriate, **why the others are wrong**.
+- Avoid phrases such as “according to the text” or “the passage states”.
+- Ensure medical accuracy and logical consistency.
+
+【Output Format】
+Your response must be a single valid JSON object in this format:
+
+{
+  "think": "β-adrenergic stimulation activates Gs protein and adenylyl cyclase, raising cAMP levels. This increases calcium entry and contractility. Other options describe mechanisms that reduce contractility....",
+  "answer": "C"
+}
+
+【Important】
+- The “answer” must contain only the **letter** (A/B/C/D/E) of the correct option.
+- The “think” field must express reasoning in full sentences, describing both the logic and physiological mechanism.
+- Do not repeat the question text or reformat the options.
+- Do not output anything except the JSON object.
+
+【Input】
+Question:
+{{QUESTION}}
+
+Text to Analyze:
+{{TEXT}}

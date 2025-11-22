@@ -1,0 +1,25 @@
+# Task: Extract Key Knowledge Points
+You will be given a section of a medical textbook. Read carefully and extract concise, high-value knowledge points.
+
+## Requirements:
+1. Identify the main physiological concepts, mechanisms, diseases, and functional relationships.
+2. Each knowledge point should be short, self-contained, and clinically relevant.
+3. Include definitions, structures, causes, effects, and physiological or pathological mechanisms.
+4. Avoid meta-information (e.g., section titles, figure labels, references).
+5. Each knowledge point should enable generation of questions that test comprehension or reasoning ability.
+
+## Example
+Input Text:
+"The sarcoplasmic reticulum stores and releases calcium ions to regulate cardiac contraction and relaxation."
+
+Output Knowledge Points:
+[
+  "Function of sarcoplasmic reticulum in calcium regulation",
+  "Mechanism of calcium release and reuptake in cardiac contraction"
+]
+
+## Output Format:
+Return a JSON list of concise strings.
+
+## Text to analyze:
+{{TEXT}}

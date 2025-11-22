@@ -24,7 +24,7 @@ def main():
     # df = pd.DataFrame(data)
     # df.to_csv(SAVE_CSV, index=False, encoding="utf-8")
 
-    print("✅ Done! Dataset saved locally.")
+    print("✅ Done! dataset saved locally.")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,23 @@
-openai>=1.35.0
-datasets>=3.0.0
-scikit-learn>=1.3.0
+# === 基础依赖 ===
+torch
+transformers
+datasets==3.2.0
+accelerate
+peft
+pandas
+numpy
+addict
 tqdm>=4.66.0
-pandas>=2.1.0
 orjson>=3.9.0
+scikit-learn>=1.3.0
+
+# === 训练与奖励 ===
+trl
+sentence-transformers
+evaluate
+
+# === 工具与监控 ===
+swanlab
+modelscope==1.22.0
+huggingface_hub
+wandb
